@@ -1,4 +1,4 @@
-UAV Tactical Simulation Engine
+UAV Sim
 Bu proje, C++ ve OpenCV kullanılarak geliştirilmiş bir İHA yer kontrol istasyonu simülasyonudur.
 
 🛠 Gereksinimler
