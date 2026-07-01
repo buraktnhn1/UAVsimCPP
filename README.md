@@ -1,25 +1,79 @@
-UAV Sim
-Bu proje, C++ ve OpenCV kullanılarak geliştirilmiş bir İHA yer kontrol istasyonu simülasyonudur.
+# UAV Tactical Simulation Engine
 
-🛠 Gereksinimler
-Derleyici: Visual Studio (C++ Desktop Development yüklü olmalıdır).
+This project is a **UAV Ground Control Station Simulation** developed using **C++** and **OpenCV**.
 
-Kütüphane: OpenCV (4.x sürümü önerilir).
+---
 
-⚙️ Kurulum ve Ayarlar
-Projeyi çalıştırmak için OpenCV kütüphanesini Visual Studio'ya şu şekilde bağlamalısın:
+## 🛠 Requirements
 
-Include Path: Proje Özellikleri -> C/C++ -> General -> Additional Include Directories kısmına OpenCV include klasörünün yolunu ekle.
+* **Compiler:** Visual Studio (Desktop Development with C++ workload must be installed)
+* **Library:** OpenCV (Version 4.x recommended)
 
-Library Path: Proje Özellikleri -> Linker -> General -> Additional Library Directories kısmına OpenCV lib klasörünün yolunu ekle.
+---
 
-Dependencies: Proje Özellikleri -> Linker -> Input -> Additional Dependencies kısmına kullandığın OpenCV sürümünün .lib dosyasını (örneğin: opencv_world412.lib) ekle.
+## ⚙️ Installation & Configuration
 
-DLL: opencv_world412.dll dosyasını projenin .exe dosyasının olduğu klasöre kopyalamayı unutma.
+To build and run the project, you need to configure the OpenCV library in Visual Studio.
 
-🚀 Çalıştırma
-Projeyi Visual Studio'da UAVsim.sln dosyası ile aç.
+### 1. Include Directory
 
-Konfigürasyonu x64 moduna getir.
+Navigate to:
 
-"Local Windows Debugger" butonuna basarak simülasyonu başlat.                                      
+```text
+Project Properties
+└── C/C++
+    └── General
+        └── Additional Include Directories
+```
+
+Add the path to the OpenCV **include** directory.
+
+---
+
+### 2. Library Directory
+
+Navigate to:
+
+```text
+Project Properties
+└── Linker
+    └── General
+        └── Additional Library Directories
+```
+
+Add the path to the OpenCV **lib** directory.
+
+---
+
+### 3. Additional Dependencies
+
+Navigate to:
+
+```text
+Project Properties
+└── Linker
+    └── Input
+        └── Additional Dependencies
+```
+
+Add the corresponding OpenCV library file for your installed version.
+
+Example:
+
+```text
+opencv_world412.lib
+```
+
+---
+
+### 4. DLL File
+
+Copy the corresponding OpenCV DLL (e.g., `opencv_world412.dll`) into the directory containing the generated executable (`.exe`).
+
+---
+
+## 🚀 Running the Project
+
+1. Open the `UAVsim.sln` solution in Visual Studio.
+2. Set the build configuration to **x64**.
+3. Click **Local Windows Debugger** to build and launch the simulation.
